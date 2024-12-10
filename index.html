@@ -85,8 +85,30 @@
 
 <body>
   <nav style="background: #333; padding: 1rem; text-align: center;">
-    <a href="article.html" style="color: white; text-decoration: none; font-size: 1.2rem;">Go to Article</a>
+    <a href="article.html" style="color: white; text-decoration: none; font-size: 1.2rem; margin-right: 20px;">Go to
+      Article</a>
+    <button onclick="openModal()"
+      style="background: #ff4d4d; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-size: 1.2rem;">消息通知</button>
   </nav>
+  <div id="messageModal"
+    style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4);">
+    <div
+      style="background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 5px; text-align: center;">
+      <h2>系统通知</h2>
+      <p>接收远程消息</p>
+      <button onclick="closeModal()"
+        style="background: #ff4d4d; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer;">关闭</button>
+    </div>
+  </div>
+  <script>
+    function openModal() {
+      document.getElementById("messageModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("messageModal").style.display = "none";
+    }
+  </script>
   <div class="parallax-container">
     <section class="section">
       <div class="parallax"
